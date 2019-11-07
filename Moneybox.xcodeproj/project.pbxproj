@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17C615A823745A7000C8E968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615A723745A7000C8E968 /* AppDelegate.swift */; };
+		17C615AA23745A7000C8E968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615A923745A7000C8E968 /* SceneDelegate.swift */; };
+		17C615AC23745A7000C8E968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615AB23745A7000C8E968 /* ViewController.swift */; };
+		17C615AF23745A7000C8E968 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C615AD23745A7000C8E968 /* Main.storyboard */; };
+		17C615B123745A7B00C8E968 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C615B023745A7B00C8E968 /* Assets.xcassets */; };
+		17C615B423745A7B00C8E968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C615B223745A7B00C8E968 /* LaunchScreen.storyboard */; };
+		17C615BF23745A7C00C8E968 /* MoneyboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615BE23745A7C00C8E968 /* MoneyboxTests.swift */; };
+		17C615CA23745A7C00C8E968 /* MoneyboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615C923745A7C00C8E968 /* MoneyboxUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17C615BB23745A7C00C8E968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6159C23745A6F00C8E968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17C615A323745A6F00C8E968;
+			remoteInfo = Moneybox;
+		};
+		17C615C623745A7C00C8E968 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17C6159C23745A6F00C8E968 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17C615A323745A6F00C8E968;
+			remoteInfo = Moneybox;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17C615A423745A7000C8E968 /* Moneybox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneybox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C615A723745A7000C8E968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17C615A923745A7000C8E968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		17C615AB23745A7000C8E968 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17C615AE23745A7000C8E968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17C615B023745A7B00C8E968 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17C615B323745A7B00C8E968 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17C615B523745A7B00C8E968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17C615BA23745A7C00C8E968 /* MoneyboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C615BE23745A7C00C8E968 /* MoneyboxTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyboxTests.swift; sourceTree = "<group>"; };
+		17C615C023745A7C00C8E968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17C615C523745A7C00C8E968 /* MoneyboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17C615C923745A7C00C8E968 /* MoneyboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyboxUITests.swift; sourceTree = "<group>"; };
+		17C615CB23745A7C00C8E968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17C615A123745A6F00C8E968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17C615B723745A7C00C8E968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17C615C223745A7C00C8E968 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17C6159B23745A6F00C8E968 = {
+			isa = PBXGroup;
+			children = (
+				17C615A623745A7000C8E968 /* Moneybox */,
+				17C615BD23745A7C00C8E968 /* MoneyboxTests */,
+				17C615C823745A7C00C8E968 /* MoneyboxUITests */,
+				17C615A523745A7000C8E968 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17C615A523745A7000C8E968 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17C615A423745A7000C8E968 /* Moneybox.app */,
+				17C615BA23745A7C00C8E968 /* MoneyboxTests.xctest */,
+				17C615C523745A7C00C8E968 /* MoneyboxUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17C615A623745A7000C8E968 /* Moneybox */ = {
+			isa = PBXGroup;
+			children = (
+				17C615A723745A7000C8E968 /* AppDelegate.swift */,
+				17C615A923745A7000C8E968 /* SceneDelegate.swift */,
+				17C615AB23745A7000C8E968 /* ViewController.swift */,
+				17C615AD23745A7000C8E968 /* Main.storyboard */,
+				17C615B023745A7B00C8E968 /* Assets.xcassets */,
+				17C615B223745A7B00C8E968 /* LaunchScreen.storyboard */,
+				17C615B523745A7B00C8E968 /* Info.plist */,
+			);
+			path = Moneybox;
+			sourceTree = "<group>";
+		};
+		17C615BD23745A7C00C8E968 /* MoneyboxTests */ = {
+			isa = PBXGroup;
+			children = (
+				17C615BE23745A7C00C8E968 /* MoneyboxTests.swift */,
+				17C615C023745A7C00C8E968 /* Info.plist */,
+			);
+			path = MoneyboxTests;
+			sourceTree = "<group>";
+		};
+		17C615C823745A7C00C8E968 /* MoneyboxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17C615C923745A7C00C8E968 /* MoneyboxUITests.swift */,
+				17C615CB23745A7C00C8E968 /* Info.plist */,
+			);
+			path = MoneyboxUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17C615A323745A6F00C8E968 /* Moneybox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17C615CE23745A7C00C8E968 /* Build configuration list for PBXNativeTarget "Moneybox" */;
+			buildPhases = (
+				17C615A023745A6F00C8E968 /* Sources */,
+				17C615A123745A6F00C8E968 /* Frameworks */,
+				17C615A223745A6F00C8E968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Moneybox;
+			productName = Moneybox;
+			productReference = 17C615A423745A7000C8E968 /* Moneybox.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17C615B923745A7C00C8E968 /* MoneyboxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17C615D123745A7C00C8E968 /* Build configuration list for PBXNativeTarget "MoneyboxTests" */;
+			buildPhases = (
+				17C615B623745A7C00C8E968 /* Sources */,
+				17C615B723745A7C00C8E968 /* Frameworks */,
+				17C615B823745A7C00C8E968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17C615BC23745A7C00C8E968 /* PBXTargetDependency */,
+			);
+			name = MoneyboxTests;
+			productName = MoneyboxTests;
+			productReference = 17C615BA23745A7C00C8E968 /* MoneyboxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17C615C423745A7C00C8E968 /* MoneyboxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17C615D423745A7C00C8E968 /* Build configuration list for PBXNativeTarget "MoneyboxUITests" */;
+			buildPhases = (
+				17C615C123745A7C00C8E968 /* Sources */,
+				17C615C223745A7C00C8E968 /* Frameworks */,
+				17C615C323745A7C00C8E968 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17C615C723745A7C00C8E968 /* PBXTargetDependency */,
+			);
+			name = MoneyboxUITests;
+			productName = MoneyboxUITests;
+			productReference = 17C615C523745A7C00C8E968 /* MoneyboxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17C6159C23745A6F00C8E968 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = JARBerry;
+				TargetAttributes = {
+					17C615A323745A6F00C8E968 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					17C615B923745A7C00C8E968 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 17C615A323745A6F00C8E968;
+					};
+					17C615C423745A7C00C8E968 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 17C615A323745A6F00C8E968;
+					};
+				};
+			};
+			buildConfigurationList = 17C6159F23745A6F00C8E968 /* Build configuration list for PBXProject "Moneybox" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17C6159B23745A6F00C8E968;
+			productRefGroup = 17C615A523745A7000C8E968 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17C615A323745A6F00C8E968 /* Moneybox */,
+				17C615B923745A7C00C8E968 /* MoneyboxTests */,
+				17C615C423745A7C00C8E968 /* MoneyboxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17C615A223745A6F00C8E968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17C615B423745A7B00C8E968 /* LaunchScreen.storyboard in Resources */,
+				17C615B123745A7B00C8E968 /* Assets.xcassets in Resources */,
+				17C615AF23745A7000C8E968 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17C615B823745A7C00C8E968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17C615C323745A7C00C8E968 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17C615A023745A6F00C8E968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17C615AC23745A7000C8E968 /* ViewController.swift in Sources */,
+				17C615A823745A7000C8E968 /* AppDelegate.swift in Sources */,
+				17C615AA23745A7000C8E968 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17C615B623745A7C00C8E968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17C615BF23745A7C00C8E968 /* MoneyboxTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17C615C123745A7C00C8E968 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17C615CA23745A7C00C8E968 /* MoneyboxUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17C615BC23745A7C00C8E968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17C615A323745A6F00C8E968 /* Moneybox */;
+			targetProxy = 17C615BB23745A7C00C8E968 /* PBXContainerItemProxy */;
+		};
+		17C615C723745A7C00C8E968 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17C615A323745A6F00C8E968 /* Moneybox */;
+			targetProxy = 17C615C623745A7C00C8E968 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17C615AD23745A7000C8E968 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17C615AE23745A7000C8E968 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17C615B223745A7B00C8E968 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17C615B323745A7B00C8E968 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17C615CC23745A7C00C8E968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17C615CD23745A7C00C8E968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17C615CF23745A7C00C8E968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB3R28AQ59;
+				INFOPLIST_FILE = Moneybox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JARBerry.Moneybox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17C615D023745A7C00C8E968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB3R28AQ59;
+				INFOPLIST_FILE = Moneybox/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JARBerry.Moneybox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17C615D223745A7C00C8E968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB3R28AQ59;
+				INFOPLIST_FILE = MoneyboxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JARBerry.MoneyboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moneybox.app/Moneybox";
+			};
+			name = Debug;
+		};
+		17C615D323745A7C00C8E968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB3R28AQ59;
+				INFOPLIST_FILE = MoneyboxTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JARBerry.MoneyboxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Moneybox.app/Moneybox";
+			};
+			name = Release;
+		};
+		17C615D523745A7C00C8E968 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB3R28AQ59;
+				INFOPLIST_FILE = MoneyboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JARBerry.MoneyboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Moneybox;
+			};
+			name = Debug;
+		};
+		17C615D623745A7C00C8E968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WB3R28AQ59;
+				INFOPLIST_FILE = MoneyboxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JARBerry.MoneyboxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Moneybox;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17C6159F23745A6F00C8E968 /* Build configuration list for PBXProject "Moneybox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17C615CC23745A7C00C8E968 /* Debug */,
+				17C615CD23745A7C00C8E968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17C615CE23745A7C00C8E968 /* Build configuration list for PBXNativeTarget "Moneybox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17C615CF23745A7C00C8E968 /* Debug */,
+				17C615D023745A7C00C8E968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17C615D123745A7C00C8E968 /* Build configuration list for PBXNativeTarget "MoneyboxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17C615D223745A7C00C8E968 /* Debug */,
+				17C615D323745A7C00C8E968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17C615D423745A7C00C8E968 /* Build configuration list for PBXNativeTarget "MoneyboxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17C615D523745A7C00C8E968 /* Debug */,
+				17C615D623745A7C00C8E968 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17C6159C23745A6F00C8E968 /* Project object */;
+}
