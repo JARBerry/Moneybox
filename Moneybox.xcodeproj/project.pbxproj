@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175BF9972382AB0C0046BF32 /* HeaderInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175BF9962382AB0C0046BF32 /* HeaderInfo.swift */; };
+		175BF99A2382AD270046BF32 /* DetailInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175BF9992382AD270046BF32 /* DetailInfo.swift */; };
+		175BF99C2382AFAB0046BF32 /* PaymentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175BF99B2382AFAB0046BF32 /* PaymentInfo.swift */; };
 		17C615A823745A7000C8E968 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615A723745A7000C8E968 /* AppDelegate.swift */; };
 		17C615AA23745A7000C8E968 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615A923745A7000C8E968 /* SceneDelegate.swift */; };
 		17C615AC23745A7000C8E968 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615AB23745A7000C8E968 /* ViewController.swift */; };
@@ -15,6 +18,8 @@
 		17C615B423745A7B00C8E968 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C615B223745A7B00C8E968 /* LaunchScreen.storyboard */; };
 		17C615BF23745A7C00C8E968 /* MoneyboxTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615BE23745A7C00C8E968 /* MoneyboxTests.swift */; };
 		17C615CA23745A7C00C8E968 /* MoneyboxUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615C923745A7C00C8E968 /* MoneyboxUITests.swift */; };
+		17C615D823745EB600C8E968 /* UserAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615D723745EB600C8E968 /* UserAccountsViewController.swift */; };
+		17C615DA23745EF800C8E968 /* IndividualAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C615D923745EF800C8E968 /* IndividualAccountViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		175BF9962382AB0C0046BF32 /* HeaderInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderInfo.swift; sourceTree = "<group>"; };
+		175BF9992382AD270046BF32 /* DetailInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfo.swift; sourceTree = "<group>"; };
+		175BF99B2382AFAB0046BF32 /* PaymentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentInfo.swift; sourceTree = "<group>"; };
 		17C615A423745A7000C8E968 /* Moneybox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moneybox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C615A723745A7000C8E968 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17C615A923745A7000C8E968 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +57,8 @@
 		17C615C523745A7C00C8E968 /* MoneyboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoneyboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C615C923745A7C00C8E968 /* MoneyboxUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyboxUITests.swift; sourceTree = "<group>"; };
 		17C615CB23745A7C00C8E968 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17C615D723745EB600C8E968 /* UserAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsViewController.swift; sourceTree = "<group>"; };
+		17C615D923745EF800C8E968 /* IndividualAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualAccountViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		175BF9982382AB130046BF32 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				175BF9962382AB0C0046BF32 /* HeaderInfo.swift */,
+				175BF9992382AD270046BF32 /* DetailInfo.swift */,
+				175BF99B2382AFAB0046BF32 /* PaymentInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		17C6159B23745A6F00C8E968 = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +122,11 @@
 				17C615A723745A7000C8E968 /* AppDelegate.swift */,
 				17C615A923745A7000C8E968 /* SceneDelegate.swift */,
 				17C615AB23745A7000C8E968 /* ViewController.swift */,
+				17C615D723745EB600C8E968 /* UserAccountsViewController.swift */,
+				17C615D923745EF800C8E968 /* IndividualAccountViewController.swift */,
 				17C615AD23745A7000C8E968 /* Main.storyboard */,
 				17C615B023745A7B00C8E968 /* Assets.xcassets */,
+				175BF9982382AB130046BF32 /* Models */,
 				17C615B223745A7B00C8E968 /* LaunchScreen.storyboard */,
 				17C615B523745A7B00C8E968 /* Info.plist */,
 			);
@@ -259,8 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175BF99A2382AD270046BF32 /* DetailInfo.swift in Sources */,
+				175BF9972382AB0C0046BF32 /* HeaderInfo.swift in Sources */,
 				17C615AC23745A7000C8E968 /* ViewController.swift in Sources */,
+				17C615DA23745EF800C8E968 /* IndividualAccountViewController.swift in Sources */,
 				17C615A823745A7000C8E968 /* AppDelegate.swift in Sources */,
+				17C615D823745EB600C8E968 /* UserAccountsViewController.swift in Sources */,
+				175BF99C2382AFAB0046BF32 /* PaymentInfo.swift in Sources */,
 				17C615AA23745A7000C8E968 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

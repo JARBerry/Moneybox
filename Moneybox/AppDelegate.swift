@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Moneybox
 //
-//  Created by Ray Berry on 07/11/2019.
+//  Created by James Berry on 18/11/2019.
 //  Copyright © 2019 JARBerry. All rights reserved.
 //
 
