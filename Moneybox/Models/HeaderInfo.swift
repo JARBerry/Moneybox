@@ -21,6 +21,73 @@ struct HeaderInfo: Codable {
     struct SessionInfo: Codable {
         let BearerToken : String
     }
+    
+    
+    
+    static func urlRequestHeader(){
+            
+//                 let url = URL(string: "https://api-test01.moneyboxapp.com/users/login")!
+        
+        let url = URL(string: Constants.url)!
+
+                 
+            var request = URLRequest(url: url)
+                  
+                  // setting the HTTP headers
+                  request.httpMethod = "POST"
+        request.setValue(Constants.appId, forHTTPHeaderField: "AppId")
+        request.setValue(Constants.contentType, forHTTPHeaderField: "Content-Type")
+        request.setValue(Constants.appVersion, forHTTPHeaderField:"appVersion")
+        request.setValue(Constants.apiVersion, forHTTPHeaderField:"apiVersion")
+                 
+        let newTodo: [String: Any] = ["Email": Constants.email, "Password": Constants.password, Constants.idfa: "ANYTHING"]
+                 let jsonTodo: Data
+                 do {
+                     jsonTodo = try JSONSerialization.data(withJSONObject: newTodo, options: [])
+                     request.httpBody = jsonTodo
+                 } catch {
+                     print("Error: cannot create JSON from todo")
+
+                 }
+                 
+                 //URL session request
+                 let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+                     if let error = error {
+                         print("error: \(error)")
+                     } else {
+                         if let response = response as? HTTPURLResponse {
+                             print("statusCode: \(response.statusCode)")
+                         }
+                      //  if let data = data, let dataString = String(data: data, encoding: .utf8) {
+                             let jsonDecoder = JSONDecoder()
+
+                                   if let data = data,
+                                      let dataString = try?
+                                          jsonDecoder.decode(HeaderInfo.self, from: data) {
+                                   
+                                 
+                                     print(dataString.Session.BearerToken)
+                                   
+                                     let token = dataString.Session.BearerToken
+                               //      extractDetailInfo(bearerToken: token)
+                         }
+                     
+                     }
+                 }
+                 task.resume()
+
+
+                 
+             }
+
+
+
+   
+
+
+
+
+
 }
    
 // This is the CodingKeys so the below datas names will now use camel case

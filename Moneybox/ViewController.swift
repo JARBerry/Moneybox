@@ -10,22 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let url = URL(string: "https://api-test01.moneyboxapp.com/users/login")!
-
+    
+    @IBOutlet weak var emailLabel: UITextField!
+    
+    @IBOutlet weak var passwordLabel: UITextField!
+    
+    
+    @IBOutlet weak var nameLabel: UITextField!
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        var request = URLRequest(url: url)
-        
-        // setting the HTTP headers
-        request.httpMethod = "POST"
-        request.setValue("3a97b932a9d449c981b595", forHTTPHeaderField: "AppId")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("5.10.0", forHTTPHeaderField:"appVersion")
-        request.setValue("3.0.0", forHTTPHeaderField:"apiVersion")
+        HeaderInfo.urlRequestHeader()
     }
+    
+    @IBAction func loginButton(_ sender: UIButton) {
+    }
+    
    
    
-
 }
 
