@@ -19,14 +19,13 @@ struct HeaderInfo: Codable {
     let Session: SessionInfo
     // This the structure called SessionInfo this contains the BearToken.
     struct SessionInfo: Codable {
-        let BearerToken : String
+       let BearerToken : String
     }
     
-    
+   
     
     static func urlRequestHeader(){
-            
-//                 let url = URL(string: "https://api-test01.moneyboxapp.com/users/login")!
+
         
         let url = URL(string: Constants.url)!
 
@@ -35,12 +34,12 @@ struct HeaderInfo: Codable {
                   
                   // setting the HTTP headers
                   request.httpMethod = "POST"
-        request.setValue(Constants.appId, forHTTPHeaderField: "AppId")
-        request.setValue(Constants.contentType, forHTTPHeaderField: "Content-Type")
-        request.setValue(Constants.appVersion, forHTTPHeaderField:"appVersion")
-        request.setValue(Constants.apiVersion, forHTTPHeaderField:"apiVersion")
+        request.setValue(Constants.appId, forHTTPHeaderField: Constants.urlAppId)
+        request.setValue(Constants.contentType, forHTTPHeaderField: Constants.urlContentType)
+        request.setValue(Constants.appVersion, forHTTPHeaderField:Constants.urlAppVersion)
+        request.setValue(Constants.apiVersion, forHTTPHeaderField:Constants.urlApiVersion)
                  
-        let newTodo: [String: Any] = ["Email": Constants.email, "Password": Constants.password, Constants.idfa: "ANYTHING"]
+        let newTodo: [String: Any] = [Constants.urlEmail: Constants.email, Constants.urlPassword: Constants.password, Constants.urlIdfa: Constants.idfa]
                  let jsonTodo: Data
                  do {
                      jsonTodo = try JSONSerialization.data(withJSONObject: newTodo, options: [])
@@ -68,8 +67,11 @@ struct HeaderInfo: Codable {
                                  
                                      print(dataString.Session.BearerToken)
                                    
-                                     let token = dataString.Session.BearerToken
+                                    let token = dataString.Session.BearerToken
+                                    
+                                    print("Bearer \(token)")
                                //      extractDetailInfo(bearerToken: token)
+                        
                          }
                      
                      }

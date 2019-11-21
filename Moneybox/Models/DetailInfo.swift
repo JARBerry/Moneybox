@@ -31,24 +31,24 @@ struct DetailInfo: Codable {
         static func urlRequestDetailInfo(){
         //MARK: Get
 
-            let url2 = URL(string: Constants.url)!
+            let url = URL(string: Constants.url)!
 
-        var request2 = URLRequest(url: url2)
+        var request = URLRequest(url: url)
 
         // setting the HTTP headers
-        request2.httpMethod = "GET"
-            request2.setValue(Constants.appId, forHTTPHeaderField: "AppId")
-            request2.setValue(Constants.contentType, forHTTPHeaderField: "Content-Type")
-            request2.setValue(Constants.appVersion, forHTTPHeaderField:"appVersion")
-            request2.setValue(Constants.apiVersion, forHTTPHeaderField:"apiVersion")
-    //    request2.setValue("Bearer " + bearerToken, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+            request.setValue(Constants.appId, forHTTPHeaderField: Constants.urlAppId)
+            request.setValue(Constants.contentType, forHTTPHeaderField: Constants.urlContentType)
+            request.setValue(Constants.appVersion, forHTTPHeaderField:Constants.urlAppVersion)
+            request.setValue(Constants.apiVersion, forHTTPHeaderField:Constants.urlApiVersion)
+    //    request.setValue("Bearer " + bearerToken, forHTTPHeaderField: "Authorization")
 
             
 
 
 
         // URL session request
-        let detailTask = URLSession.shared.dataTask(with: request2) { (data, response, error) in
+        let detailTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 print("error: \(error)")
             } else {

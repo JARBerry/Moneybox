@@ -98,6 +98,16 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		17A2D2B923848496006E0E95 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				17C615AB23745A7000C8E968 /* ViewController.swift */,
+				17C615D723745EB600C8E968 /* UserAccountsViewController.swift */,
+				17C615D923745EF800C8E968 /* IndividualAccountViewController.swift */,
+			);
+			path = Contollers;
+			sourceTree = "<group>";
+		};
 		17C6159B23745A6F00C8E968 = {
 			isa = PBXGroup;
 			children = (
@@ -123,9 +133,7 @@
 			children = (
 				17C615A723745A7000C8E968 /* AppDelegate.swift */,
 				17C615A923745A7000C8E968 /* SceneDelegate.swift */,
-				17C615AB23745A7000C8E968 /* ViewController.swift */,
-				17C615D723745EB600C8E968 /* UserAccountsViewController.swift */,
-				17C615D923745EF800C8E968 /* IndividualAccountViewController.swift */,
+				17A2D2B923848496006E0E95 /* Contollers */,
 				17C615AD23745A7000C8E968 /* Main.storyboard */,
 				175BF9DB238418B50046BF32 /* Constants.swift */,
 				17C615B023745A7B00C8E968 /* Assets.xcassets */,

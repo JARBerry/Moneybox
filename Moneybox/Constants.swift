@@ -17,4 +17,13 @@ struct Constants {
     static let idfa = "ANYTHING"
     static let amount = 10
     static let inverstorProductId = 3760
+    static let urlAppId = "AppId"
+    static let urlContentType = "Content-Type"
+    static let urlAppVersion = "appVersion"
+    static let urlApiVersion = "apiVersion"
+    static let urlEmail = "Email"
+    static let urlPassword = "Password"
+    static let urlIdfa = "Idfa"
+    static let urlAmount = "Amount"
+    static let urlInvestorProductId = "InvestorProductId"
 }
