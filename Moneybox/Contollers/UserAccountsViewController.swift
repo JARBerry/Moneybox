@@ -34,53 +34,37 @@ class UserAccountsViewController: UIViewController {
         
         
         
-       HeaderInfo.urlRequestHeader {(token, name) in
-             print("Header URL Request \(token)")
-        print("Header URL Request Name \(name)")
-       
-//
-//            DetailInfo.urlRequestDetailInfo((token)){(Id) in
-
-        DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox) in
-//            print("Plan value \(sasPlanValue)")
-//              print("Account name \(sasAccountName)")
-//            print("ID number \(sasId)")
-//             print("Moneybox \(sasMoneybox)")
-//            print("Plan value \(lisaPlanValue)")
-//              print("Account name \(lisaAccountName)")
-//            print("ID number \(lisaId)")
-//             print("Moneybox \(lisaMoneybox)")
-//            print("Plan value \(giPlanValue)")
-//            print("Account name \(giAccountName)")
-//            print("ID number \(giId)")
-//            print("Moneybox \(giMoneybox)")
+        HeaderInfo.urlRequestHeader {(token, name) in
+            print("Header URL Request \(token)")
+            print("Header URL Request Name \(name)")
+            
+            //
+            //            DetailInfo.urlRequestDetailInfo((token)){(Id) in
+            
+            DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox) in
+                
+                self.giMoneybox = giMoneybox
+                self.giId = giId
+                self.giAccountName = giAccountName
+                self.giPlanValue = giPlanValue
+                
+                self.sasId = sasId
+                self.sasMoneybox = sasMoneybox
+                self.sasPlanValue = sasPlanValue
+                self.sasAccountName = sasAccountName
+                
+                self.lisaId = lisaId
+                self.lisaMoneybox = lisaMoneybox
+                self.lisaPlanValue = lisaPlanValue
+                self.lisaAccountName = lisaAccountName
+                
+                
+                
+            }
         
-            self.giMoneybox = giMoneybox
-            self.giId = giId
-            self.giAccountName = giAccountName
-            self.giPlanValue = giPlanValue
             
-            self.sasId = sasId
-            self.sasMoneybox = sasMoneybox
-            self.sasPlanValue = sasPlanValue
-            self.sasAccountName = sasAccountName
-            
-            self.lisaId = lisaId
-            self.lisaMoneybox = lisaMoneybox
-            self.lisaPlanValue = lisaPlanValue
-            self.lisaAccountName = lisaAccountName
-            
-            
-            
-            
-            
-            
-       }
-      
-        
-
         }
-     
+        
         
         //receive token
         
@@ -112,17 +96,8 @@ class UserAccountsViewController: UIViewController {
         print(giPlanValue)
         print(giMoneybox)
         print("Entered IBAction")
-        
-        
-         
          
                      }
-        
-        
-        
-        
-    
-    
     
            //  IBAction if ISA - pass through id for ISA
     @IBAction func lifetimeISAButton(_ sender: UIButton) {

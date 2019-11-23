@@ -19,7 +19,7 @@ struct DetailInfo: Codable {
             //MARK: Get
 
 //            let url = URL(string: Constants.url)!
-        let url = URL(string: "https://api-test01.moneyboxapp.com/investorproducts")!
+        let url = URL(string: Constants.urlDetail)!
     
         var request = URLRequest(url: url)
 

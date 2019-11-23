@@ -39,6 +39,24 @@ class IndividualAccountViewController: UIViewController {
     //IBACTION if add £10 - call payment info with correct id
     
     @IBAction func addTenPoundsButton(_ sender: UIButton) {
+        
+        
+        HeaderInfo.urlRequestHeader {(token, name) in
+            print("Payment Header URL Request \(token)")
+            print("Payment Header URL Request Name \(name)")
+            
+            //
+            //            DetailInfo.urlRequestDetailInfo((token)){(Id) in
+            PaymentInfo.urlRequestPaymentInfo(token: token)
+           
+                
+                
+                
+            
+        
+            
+        }
+        
     }
     
     

@@ -8,6 +8,8 @@
 
 struct Constants {
     static let url = "https://api-test01.moneyboxapp.com/users/login"
+    static let urlDetail = "https://api-test01.moneyboxapp.com/investorproducts"
+    static let urlIndividualAccount = "https://api-test01.moneyboxapp.com/oneoffpayments"
     static let appId = "3a97b932a9d449c981b595"
     static let contentType = "application/json"
     static let appVersion = "5.10.0"

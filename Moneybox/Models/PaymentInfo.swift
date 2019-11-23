@@ -13,24 +13,27 @@ struct PaymentInfo: Codable {
  // These properties have to be the same name as the JSON Data so you can access them
  let Moneybox : Double
  
-   
-    
+    static func urlRequestPaymentInfo(token: String) {
+    let url = URL(string: Constants.urlIndividualAccount)!
 
-
-static func urlRequestPaymentInfo() {
-    let url = URL(string: Constants.url)!
-
+     print(url)
     var request = URLRequest(url: url)
 
     // setting the HTTP headers
     request.httpMethod = "POST"
+     
+        
     request.setValue(Constants.appId, forHTTPHeaderField: Constants.urlAppId)
+        
+        
     request.setValue(Constants.contentType, forHTTPHeaderField: Constants.urlContentType)
     request.setValue(Constants.appVersion, forHTTPHeaderField:Constants.appVersion)
     request.setValue(Constants.apiVersion, forHTTPHeaderField:Constants.urlApiVersion)
-    request.setValue("Bearer ZYZxMw5NNw0ZCqa0tuzkaICGT7sAVoQEGMe9Pt8AA8U=", forHTTPHeaderField: "Authorization")
-
-
+   // request.setValue("Bearer ZYZxMw5NNw0ZCqa0tuzkaICGT7sAVoQEGMe9Pt8AA8U=", forHTTPHeaderField: "Authorization")
+     request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
+   print(request)
+        
+   print("payments URL requested \(token)")
 
     // setting the HTTP body with email and password and Idfa
     let newTodo: [String: Any] = [Constants.urlEmail: Constants.email, Constants.urlPassword: Constants.password, Constants.urlIdfa: Constants.idfa, Constants.urlAmount: Constants.amount, Constants.urlInvestorProductId: Constants.inverstorProductId]
