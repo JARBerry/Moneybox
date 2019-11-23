@@ -9,11 +9,26 @@
 import UIKit
 
 class IndividualAccountViewController: UIViewController {
+    
+    @IBOutlet weak var accountLabel: UILabel!
+    
+    @IBOutlet weak var planValueLabel: UILabel!
+    
+    @IBOutlet weak var moneyboxLabel: UILabel!
+    
+    
+    var iavcId = 0
+    var iavcAccountName = ""
+    var iavcPlanValue = 0.0
+    var iavcMoneybox = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        accountLabel.text = iavcAccountName
+        planValueLabel.text = "£" + String(iavcPlanValue)
+        moneyboxLabel.text = "£" + String(iavcMoneybox)
         
+      
         // get the id pass through
         // change display for correct account
         

@@ -24,7 +24,7 @@ struct HeaderInfo: Codable {
     
    
     
-    static func urlRequestHeader(){
+    static func urlRequestHeader(_ completion: @escaping (String,String) -> ())  {
 
         
         let url = URL(string: Constants.url)!
@@ -65,11 +65,15 @@ struct HeaderInfo: Codable {
                                           jsonDecoder.decode(HeaderInfo.self, from: data) {
                                    
                                  
-                                     print(dataString.Session.BearerToken)
-                                   
-                                    let token = dataString.Session.BearerToken
+                                  ///   print("Header token \(dataString.Session.BearerToken)")
+//
+//                                    let token =
+//                                        dataString.Session.BearerToken + dataString.User.FirstName
                                     
-                                    print("Bearer \(token)")
+                                    let token = dataString.Session.BearerToken
+                                    let name = dataString.User.FirstName
+                                    print("Header Bearer Token \(token)")
+                                      completion(token, name)
                                //      extractDetailInfo(bearerToken: token)
                         
                          }
@@ -78,6 +82,7 @@ struct HeaderInfo: Codable {
                  }
                  task.resume()
 
+            
 
                  
              }

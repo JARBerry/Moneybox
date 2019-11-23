@@ -9,9 +9,78 @@
 import UIKit
 
 class UserAccountsViewController: UIViewController {
+    
+    var uavcToken = ""
+    
+    
+    var giMoneybox = 0.0
+    var giAccountName = ""
+    var giId = 0
+    var giPlanValue = 0.0
+    
+    var sasMoneybox = 0.0
+    var sasAccountName = ""
+    var sasId = 0
+    var sasPlanValue = 0.0
+    
+    var lisaMoneybox = 0.0
+    var lisaAccountName = ""
+    var lisaId = 0
+    var lisaPlanValue = 0.0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+       HeaderInfo.urlRequestHeader {(token, name) in
+             print("Header URL Request \(token)")
+        print("Header URL Request Name \(name)")
+       
+//
+//            DetailInfo.urlRequestDetailInfo((token)){(Id) in
+
+        DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox) in
+//            print("Plan value \(sasPlanValue)")
+//              print("Account name \(sasAccountName)")
+//            print("ID number \(sasId)")
+//             print("Moneybox \(sasMoneybox)")
+//            print("Plan value \(lisaPlanValue)")
+//              print("Account name \(lisaAccountName)")
+//            print("ID number \(lisaId)")
+//             print("Moneybox \(lisaMoneybox)")
+//            print("Plan value \(giPlanValue)")
+//            print("Account name \(giAccountName)")
+//            print("ID number \(giId)")
+//            print("Moneybox \(giMoneybox)")
+        
+            self.giMoneybox = giMoneybox
+            self.giId = giId
+            self.giAccountName = giAccountName
+            self.giPlanValue = giPlanValue
+            
+            self.sasId = sasId
+            self.sasMoneybox = sasMoneybox
+            self.sasPlanValue = sasPlanValue
+            self.sasAccountName = sasAccountName
+            
+            self.lisaId = lisaId
+            self.lisaMoneybox = lisaMoneybox
+            self.lisaPlanValue = lisaPlanValue
+            self.lisaAccountName = lisaAccountName
+            
+            
+            
+            
+            
+            
+       }
+      
+        
+
+        }
+     
         
         //receive token
         
@@ -27,20 +96,80 @@ class UserAccountsViewController: UIViewController {
     //  IBAction if stocks and shares - pass through id for stocks
     
     @IBAction func stocksAndSharesButton(_ sender: UIButton) {
+        
+       
+        
+    
     }
     
     
         //  IBAction if GIA - pass through id for GIA
     
     @IBAction func genralInvestmentsButton(_ sender: UIButton) {
-    }
+        
+        print(giId)
+        print(giAccountName)
+        print(giPlanValue)
+        print(giMoneybox)
+        print("Entered IBAction")
+        
+        
+         
+         
+                     }
+        
+        
+        
+        
+    
     
     
            //  IBAction if ISA - pass through id for ISA
     @IBAction func lifetimeISAButton(_ sender: UIButton) {
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+   
+      
+                     if segue.identifier == "dataGi" {
+        
+                         // Passing the info over to the Payment Viewcontroller
+                         let iavc = segue.destination as! IndividualAccountViewController
+
+                        iavc.iavcId = giId
+                        iavc.iavcMoneybox = giMoneybox
+                        iavc.iavcPlanValue = giPlanValue
+                        iavc.iavcAccountName = giAccountName
+                    
+                     }
+
+        if segue.identifier == "dataSas" {
+             
+                              // Passing the info over to the Payment Viewcontroller
+                              let iavc = segue.destination as! IndividualAccountViewController
+
+                             iavc.iavcId = sasId
+                             iavc.iavcMoneybox = sasMoneybox
+                             iavc.iavcPlanValue = sasPlanValue
+                             iavc.iavcAccountName = sasAccountName
+                         
+                          }
+        
+        if segue.identifier == "dataLisa" {
+             
+                              // Passing the info over to the Payment Viewcontroller
+                              let iavc = segue.destination as! IndividualAccountViewController
+
+                             iavc.iavcId = lisaId
+                             iavc.iavcMoneybox = lisaMoneybox
+                             iavc.iavcPlanValue = lisaPlanValue
+                             iavc.iavcAccountName = lisaAccountName
+                         
+                          }
+
+        
+                 }
+
 
     /*
     // MARK: - Navigation
@@ -53,3 +182,4 @@ class UserAccountsViewController: UIViewController {
     */
 
 }
+

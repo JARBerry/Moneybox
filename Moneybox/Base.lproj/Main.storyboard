@@ -41,7 +41,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="da8-kY-Rzh"/>
-                                    <segue destination="ljR-mk-wIM" kind="presentation" modalPresentationStyle="fullScreen" id="gQn-9A-bjv"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCf-eb-o7k">
@@ -85,6 +84,7 @@
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="emailLabel" destination="kpy-3H-qSO" id="uGm-2a-xJI"/>
+                        <outlet property="loginOutletButton" destination="m9Q-af-dra" id="UsG-b1-mTy"/>
                         <outlet property="nameLabel" destination="7p5-FK-ec9" id="bOI-ba-G6d"/>
                         <outlet property="passwordLabel" destination="SCP-XN-PcZ" id="Fn8-fm-YqH"/>
                     </connections>
@@ -96,7 +96,7 @@
         <!--User Accounts View Controller-->
         <scene sceneID="Bd2-Su-EOw">
             <objects>
-                <viewController id="ljR-mk-wIM" customClass="UserAccountsViewController" customModule="Moneybox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dataForwards" id="ljR-mk-wIM" customClass="UserAccountsViewController" customModule="Moneybox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YQz-5t-MhP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,7 +135,7 @@
                                 </state>
                                 <connections>
                                     <action selector="stocksAndSharesButton:" destination="ljR-mk-wIM" eventType="touchUpInside" id="Ovl-77-hka"/>
-                                    <segue destination="4va-4b-sUf" kind="presentation" modalPresentationStyle="fullScreen" id="KAA-9i-TGl"/>
+                                    <segue destination="4va-4b-sUf" kind="presentation" identifier="dataSas" modalPresentationStyle="fullScreen" id="HLD-p8-un4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVr-3b-TP1">
@@ -147,6 +147,7 @@
                                 </state>
                                 <connections>
                                     <action selector="genralInvestmentsButton:" destination="ljR-mk-wIM" eventType="touchUpInside" id="9ZS-7A-QYs"/>
+                                    <segue destination="4va-4b-sUf" kind="presentation" identifier="dataGi" modalPresentationStyle="fullScreen" id="dih-0c-8Zx"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iaM-Sr-4H9">
@@ -158,6 +159,7 @@
                                 </state>
                                 <connections>
                                     <action selector="lifetimeISAButton:" destination="ljR-mk-wIM" eventType="touchUpInside" id="SEr-ta-uFw"/>
+                                    <segue destination="4va-4b-sUf" kind="presentation" identifier="dataLisa" modalPresentationStyle="fullScreen" id="4az-NL-4c7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEd-f9-9ke">
@@ -202,7 +204,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stocks and Shares" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dI8-Za-Bqq">
-                                <rect key="frame" x="20" y="161" width="217" height="30"/>
+                                <rect key="frame" x="20" y="161" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,7 +236,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="£1000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXl-s5-lH3">
-                                <rect key="frame" x="158" y="210" width="80" height="30"/>
+                                <rect key="frame" x="158" y="210" width="236" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -259,7 +261,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="£50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49d-GI-Q3H">
-                                <rect key="frame" x="158" y="253" width="50" height="30"/>
+                                <rect key="frame" x="158" y="253" width="236" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -271,6 +273,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="VDj-Si-P5I"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="accountLabel" destination="dI8-Za-Bqq" id="9LY-zW-w9H"/>
+                        <outlet property="moneyboxLabel" destination="49d-GI-Q3H" id="d2v-h6-rbp"/>
+                        <outlet property="planValueLabel" destination="hXl-s5-lH3" id="o1u-TC-jF1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZR-8w-b1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -284,6 +291,6 @@
         <image name="moneyboxlogotransparent" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9s0-zu-fVq"/>
+        <segue reference="4az-NL-4c7"/>
     </inferredMetricsTieBreakers>
 </document>
