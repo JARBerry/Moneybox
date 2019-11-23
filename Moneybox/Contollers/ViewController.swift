@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UITextField!
     
-    
+    var name = ""
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,53 +38,47 @@ class ViewController: UIViewController {
 //        HeaderInfo.urlRequestHeader {(token) in
 //        print("Front Screen URL \(token)")
 //        }
+        
+       
+        HeaderInfo.urlRequestHeader {(token, name) in
+           
+                        print("Header URL Request \(token)")
+                        print("Header URL Request Name is ... \(name)")
+                       
+                   self.name = name
+        }
+        
+        
+        print("Here is the name : \(name)")
+        
+        
+        
+        
+        
+        
+        
 // Moves from ViewController to UserAccountsViewController and presents it modally
        
-        let vc = self.storyboard?.instantiateViewController(identifier: "dataForwards") as! UserAccountsViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true, completion: nil)
-        
+//        let vc = self.storyboard?.instantiateViewController(identifier: "dataForwards") as! UserAccountsViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
+//        
       
-        
-        
-        
-        
-      
-            
-            // This is the prepare segue for the DetailViewController
-//                   func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//                    if segue.identifier == "dataForwards" {
-//                        // get token
-//         loginOutletButton.setTitle("Accessing Info", for: .normal)
-//                               HeaderInfo.urlRequestHeader {(token) in
-//                                  
-//
-//
-//
-//                        // Passing the info over to the DetailViewcontroller
-//                        let uavc = segue.destination as! UserAccountsViewController
-//
-//                       uavc.uavcToken = token
-//
-//
-//
-//                    }
-//
-//                }
-//
-//
-//            }
-//
-
-    // This is the perform segue to go over to the DetailViewController
-//                                      performSegue(withIdentifier: "dataForwards", sender: nil)
-//
-        // perform segue and pass token
         
     }
     
+    
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
    
+      
+                     if segue.identifier == "dataUser" {
+        
+                         // Passing the info over to the Payment Viewcontroller
+                         let uavc = segue.destination as! UserAccountsViewController
+
+                           uavc.uavcname = name
+                    
+                     }
    
 }
-
+}

@@ -42,6 +42,7 @@ struct DetailInfo: Codable {
             if let error = error {
                 print("error: \(error)")
             } else {
+               
                 if let response = response as? HTTPURLResponse {
                     print("statusCode: \(response.statusCode)")
                 }
@@ -55,12 +56,14 @@ struct DetailInfo: Codable {
                                      jsonDecoder.decode(DetailInfo.self, from: data) {
                               
 
-                                completion(dataString.ProductResponses[0].PlanValue, dataString.ProductResponses[0].Product.FriendlyName, dataString.ProductResponses[0].Id, dataString.ProductResponses[0].Moneybox, dataString.ProductResponses[1].PlanValue, dataString.ProductResponses[1].Product.FriendlyName, dataString.ProductResponses[1].Id, dataString.ProductResponses[1].Moneybox, dataString.ProductResponses[2].PlanValue, dataString.ProductResponses[2].Product.FriendlyName, dataString.ProductResponses[2].Id, dataString.ProductResponses[2].Moneybox)
+                    completion(dataString.ProductResponses[0].PlanValue, dataString.ProductResponses[0].Product.FriendlyName, dataString.ProductResponses[0].Id, dataString.ProductResponses[0].Moneybox, dataString.ProductResponses[1].PlanValue, dataString.ProductResponses[1].Product.FriendlyName, dataString.ProductResponses[1].Id, dataString.ProductResponses[1].Moneybox, dataString.ProductResponses[2].PlanValue, dataString.ProductResponses[2].Product.FriendlyName, dataString.ProductResponses[2].Id, dataString.ProductResponses[2].Moneybox)
 
                }
+                
             }
         }
         detailTask.resume()
+        
         }
    
 }

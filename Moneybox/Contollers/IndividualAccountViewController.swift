@@ -16,17 +16,24 @@ class IndividualAccountViewController: UIViewController {
     
     @IBOutlet weak var moneyboxLabel: UILabel!
     
+    @IBOutlet weak var successOrFailLabel: UILabel!
+    
+    var status = 0
     
     var iavcId = 0
     var iavcAccountName = ""
     var iavcPlanValue = 0.0
     var iavcMoneybox = 0.0
+    
+    var moneybox = 0.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
         accountLabel.text = iavcAccountName
         planValueLabel.text = "£" + String(iavcPlanValue)
         moneyboxLabel.text = "£" + String(iavcMoneybox)
+      
+       
         
       
         // get the id pass through
@@ -35,36 +42,64 @@ class IndividualAccountViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+
+        
+      
+    }
+    
+    
 
     //IBACTION if add £10 - call payment info with correct id
     
     @IBAction func addTenPoundsButton(_ sender: UIButton) {
         
-        
+    
         HeaderInfo.urlRequestHeader {(token, name) in
             print("Payment Header URL Request \(token)")
             print("Payment Header URL Request Name \(name)")
             
-            //
-            //            DetailInfo.urlRequestDetailInfo((token)){(Id) in
-            PaymentInfo.urlRequestPaymentInfo(token: token)
            
-                
-                
-                
-            
-        
+            PaymentInfo.urlRequestPaymentInfo(token: token){(status, moneybox) in
+             //   DispatchQueue.main.async{
+                print(moneybox)
+                print(status)
+                self.status = status
+                self.moneybox = moneybox
+                print("money money money \(moneybox)")
+            }
+          //  }
+         
             
         }
         
+        
+        print("status \(status)")
+        
+    
+        
+           DispatchQueue.main.async {
+                   
+               
+                   self.moneyboxLabel.text = "£" + String(self.moneybox)
+               }
+        
+        // Need to fix
+                               if status == 0 {
+                                                  successOrFailLabel.text = "Payment Successful"
+                                              } else  {
+                                                  successOrFailLabel.text = "Payment Unsuccessful"
+                                              }
+       
+        
+     
     }
     
+   
     
-    
-    //if status vcode is 200 diaply info.
-    
-    //if not get bearertoken and retry.
-    
+
     
     
     

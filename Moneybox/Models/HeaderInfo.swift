@@ -48,20 +48,22 @@ struct HeaderInfo: Codable {
                      print("Error: cannot create JSON from todo")
 
                  }
-                 
+     //   DispatchQueue.main.async{
                  //URL session request
                  let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                      if let error = error {
                          print("error: \(error)")
                      } else {
+                        
                          if let response = response as? HTTPURLResponse {
                              print("statusCode: \(response.statusCode)")
                          }
                       //  if let data = data, let dataString = String(data: data, encoding: .utf8) {
                              let jsonDecoder = JSONDecoder()
-
+ 
                                    if let data = data,
-                                      let dataString = try?
+                                   
+                                    let dataString = try?
                                           jsonDecoder.decode(HeaderInfo.self, from: data) {
                                    
                                  
@@ -72,16 +74,20 @@ struct HeaderInfo: Codable {
                                     
                                     let token = dataString.Session.BearerToken
                                     let name = dataString.User.FirstName
-                                    print("Header Bearer Token \(token)")
+                                   // print("Header Bearer Token \(token)")
+//                                     print(name)
                                       completion(token, name)
-                               //      extractDetailInfo(bearerToken: token)
+                               
                         
                          }
                      
-                     }
+                     
+                    }
                  }
-                 task.resume()
-
+            
+    
+            task.resume()
+   //    }
             
 
                  

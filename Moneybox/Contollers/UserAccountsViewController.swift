@@ -10,8 +10,16 @@ import UIKit
 
 class UserAccountsViewController: UIViewController {
     
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    @IBOutlet weak var planValueLabel: UILabel!
+    
     var uavcToken = ""
     
+    var uavcname = ""
+    
+    var name = ""
     
     var giMoneybox = 0.0
     var giAccountName = ""
@@ -31,51 +39,61 @@ class UserAccountsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
+     
+   
+     //   nameLabel.text = name
+           planValueLabel.text = "7890"
+   
+         print("this should be after data received")
+    }
+     
+    override func viewWillAppear(_ animated: Bool) {
+     
+   
+      
         HeaderInfo.urlRequestHeader {(token, name) in
-            print("Header URL Request \(token)")
-            print("Header URL Request Name \(name)")
-            
+                
+            //     print("Header URL Request \(token)")
             //
-            //            DetailInfo.urlRequestDetailInfo((token)){(Id) in
+            //     print("Header URL Request Name \(name)")
+                
+            self.name = name
+            print(name)
+                 
+                 DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox) in
+                       DispatchQueue.main.async{
+                     self.giMoneybox = giMoneybox
+                     self.giId = giId
+                     self.giAccountName = giAccountName
+                     self.giPlanValue = giPlanValue
+                     
+                     self.sasId = sasId
+                     self.sasMoneybox = sasMoneybox
+                     self.sasPlanValue = sasPlanValue
+                     self.sasAccountName = sasAccountName
+                     
+                     self.lisaId = lisaId
+                     self.lisaMoneybox = lisaMoneybox
+                     self.lisaPlanValue = lisaPlanValue
+                     self.lisaAccountName = lisaAccountName
+                     
+                 }
+                
+                 }
+           print("hello \(name)")
+         
             
-            DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox) in
-                
-                self.giMoneybox = giMoneybox
-                self.giId = giId
-                self.giAccountName = giAccountName
-                self.giPlanValue = giPlanValue
-                
-                self.sasId = sasId
-                self.sasMoneybox = sasMoneybox
-                self.sasPlanValue = sasPlanValue
-                self.sasAccountName = sasAccountName
-                
-                self.lisaId = lisaId
-                self.lisaMoneybox = lisaMoneybox
-                self.lisaPlanValue = lisaPlanValue
-                self.lisaAccountName = lisaAccountName
-                
-                
-                
-            }
-        
-            
+            DispatchQueue.main.async{
+                self.nameLabel.text = name
+               }
         }
         
-        
-        //receive token
-        
-        // then call detail URL request
-        
-        // display hello name and total plan value
+        super.viewWillAppear(animated)
 
-        // Do any additional setup after loading the view.
-        
-    
     }
+    
+    
+    
     
     //  IBAction if stocks and shares - pass through id for stocks
     
@@ -90,12 +108,6 @@ class UserAccountsViewController: UIViewController {
         //  IBAction if GIA - pass through id for GIA
     
     @IBAction func genralInvestmentsButton(_ sender: UIButton) {
-        
-        print(giId)
-        print(giAccountName)
-        print(giPlanValue)
-        print(giMoneybox)
-        print("Entered IBAction")
          
                      }
     
