@@ -13,7 +13,7 @@ struct PaymentInfo: Codable {
  // These properties have to be the same name as the JSON Data so you can access them
  let Moneybox : Double
  
-    static func urlRequestPaymentInfo(token: String, completion: @escaping (Int, Double) -> ()) {
+    static func urlRequestPaymentInfo(token: String, accountid: Int, completion: @escaping (Int, Double) -> ()) {
     //let url = URL(string: Constants.urlIndividualAccount)!
     let url = URL(string: "https://api-test01.moneyboxapp.com/oneoffpayments")!
      print(url)
@@ -22,14 +22,13 @@ struct PaymentInfo: Codable {
     // setting the HTTP headers
     request.httpMethod = "POST"
     
-//    request.setValue(Constants.appId, forHTTPHeaderField: Constants.urlAppId)
+    request.setValue(Constants.appId, forHTTPHeaderField: Constants.urlAppId)
 //    request.setValue(Constants.contentType, forHTTPHeaderField: Constants.urlContentType)
 //    request.setValue(Constants.appVersion, forHTTPHeaderField:Constants.appVersion)
 //    request.setValue(Constants.apiVersion, forHTTPHeaderField:Constants.urlApiVersion)
-//     request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
 //
-        request.setValue("3a97b932a9d449c981b595", forHTTPHeaderField: "AppId")
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+       request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("5.10.0", forHTTPHeaderField:"appVersion")
         request.setValue("3.0.0", forHTTPHeaderField:"apiVersion")
         request.setValue("Bearer " + token, forHTTPHeaderField: "Authorization")
@@ -39,9 +38,9 @@ struct PaymentInfo: Codable {
    print("payments URL requested \(token)")
 
     // setting the HTTP body with email and password and Idfa
-  //  let newTodo: [String: Any] = [Constants.urlEmail: Constants.email, Constants.urlPassword: Constants.password, Constants.urlIdfa: Constants.idfa, Constants.urlAmount: Constants.amount, Constants.urlInvestorProductId: Constants.inverstorProductId]
+    let newTodo: [String: Any] = [Constants.urlEmail: Constants.email, Constants.urlPassword: Constants.password, Constants.urlIdfa: Constants.idfa, Constants.urlAmount: Constants.amount, Constants.urlInvestorProductId: accountid]
         
-    let newTodo: [String: Any] = ["Email": "androidtest@moneyboxapp.com", "Password": "P455word12", "Idfa": "ANYTHING", "Amount": 10, "InvestorProductId": 3760]
+//    let newTodo: [String: Any] = ["Email": "androidtest@moneyboxapp.com", "Password": "P455word12", "Idfa": "ANYTHING", "Amount": 10, "InvestorProductId": 3760]
         
     let jsonTodo: Data
     do {

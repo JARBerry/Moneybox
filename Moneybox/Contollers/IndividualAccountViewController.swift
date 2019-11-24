@@ -56,13 +56,13 @@ class IndividualAccountViewController: UIViewController {
     
     @IBAction func addTenPoundsButton(_ sender: UIButton) {
         
-    
+        print("Account id : \(iavcId)")
         HeaderInfo.urlRequestHeader {(token, name) in
             print("Payment Header URL Request \(token)")
             print("Payment Header URL Request Name \(name)")
             
            
-            PaymentInfo.urlRequestPaymentInfo(token: token){(status, moneybox) in
+            PaymentInfo.urlRequestPaymentInfo(token: token, accountid: self.iavcId){(status, moneybox) in
              //   DispatchQueue.main.async{
                 print(moneybox)
                 print(status)
