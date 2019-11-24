@@ -135,8 +135,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="stocksAndSharesButton:" destination="ljR-mk-wIM" eventType="touchUpInside" id="Ovl-77-hka"/>
-                                    <segue destination="4va-4b-sUf" kind="presentation" identifier="dataSas" modalPresentationStyle="fullScreen" id="HLD-p8-un4"/>
+                                    <action selector="stocksAndSharesButton:" destination="ljR-mk-wIM" eventType="touchUpInside" id="ywy-ba-T3E"/>
+                                    <segue destination="4va-4b-sUf" kind="presentation" identifier="dataSas" modalPresentationStyle="fullScreen" id="5bO-tI-h73"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVr-3b-TP1">
@@ -174,8 +174,8 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="AZJ-i0-o6D"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="£7000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26i-ny-BNX">
-                                <rect key="frame" x="219" y="202" width="82" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="£8364.5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26i-ny-BNX">
+                                <rect key="frame" x="219" y="202" width="111" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -301,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZR-8w-b1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1608.6956521739132" y="109.82142857142857"/>
+            <point key="canvasLocation" x="1919" y="104"/>
         </scene>
     </scenes>
     <resources>
@@ -311,7 +311,7 @@
         <image name="moneyboxlogotransparent" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4az-NL-4c7"/>
-        <segue reference="Civ-Ot-XZ9"/>
+        <segue reference="5bO-tI-h73"/>
+        <segue reference="9s0-zu-fVq"/>
     </inferredMetricsTieBreakers>
 </document>
