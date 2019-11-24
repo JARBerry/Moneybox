@@ -2,7 +2,7 @@
 //  Constants.swift
 //  Moneybox
 //
-//  Created by Ray Berry on 19/11/2019.
+//  Created by James Berry on 19/11/2019.
 //  Copyright © 2019 JARBerry. All rights reserved.
 //
 
