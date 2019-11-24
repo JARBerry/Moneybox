@@ -16,9 +16,9 @@ class UserAccountsViewController: UIViewController {
     @IBOutlet weak var planValueLabel: UILabel!
     
     var uavcToken = ""
-    
     var uavcname = ""
-    
+    var uavcTotalPlanValue = 0.0
+    var totalPlanValue = 0.0
     var name = ""
     
     var giMoneybox = 0.0
@@ -42,9 +42,10 @@ class UserAccountsViewController: UIViewController {
      
    
      //   nameLabel.text = name
-           planValueLabel.text = "7890"
+        print("uavc totalplan is: \(uavcTotalPlanValue)")
+           planValueLabel.text = "£7890"
    
-         print("this should be after data received")
+      //   print("this should be after data received")
     }
      
     override func viewWillAppear(_ animated: Bool) {
@@ -58,9 +59,9 @@ class UserAccountsViewController: UIViewController {
             //     print("Header URL Request Name \(name)")
                 
             self.name = name
-            print(name)
+          //  print(name)
                  
-                 DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox) in
+                 DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox, totalPlanValue) in
                        DispatchQueue.main.async{
                      self.giMoneybox = giMoneybox
                      self.giId = giId
@@ -76,15 +77,17 @@ class UserAccountsViewController: UIViewController {
                      self.lisaMoneybox = lisaMoneybox
                      self.lisaPlanValue = lisaPlanValue
                      self.lisaAccountName = lisaAccountName
-                     
+                     self.totalPlanValue = totalPlanValue
+                     print("total plan value \(totalPlanValue)")
                  }
                 
                  }
-           print("hello \(name)")
+            print("hello \(self.totalPlanValue)")
          
             
             DispatchQueue.main.async{
                 self.nameLabel.text = name
+                self.planValueLabel.text = String(self.totalPlanValue)
                }
         }
         
@@ -156,17 +159,6 @@ class UserAccountsViewController: UIViewController {
 
         
                  }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

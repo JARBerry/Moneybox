@@ -13,7 +13,7 @@ struct DetailInfo: Codable {
     let TotalPlanValue: Double
     let ProductResponses: [ProductDetail]
     
-    static func urlRequestDetailInfo(token:String, completion: @escaping (Double, String, Int, Double, Double, String, Int, Double, Double, String, Int, Double) -> ()){
+    static func urlRequestDetailInfo(token:String, completion: @escaping (Double, String, Int, Double, Double, String, Int, Double, Double, String, Int, Double, Double) -> ()){
 
             
             //MARK: Get
@@ -56,7 +56,8 @@ struct DetailInfo: Codable {
                                      jsonDecoder.decode(DetailInfo.self, from: data) {
                               
 
-                    completion(dataString.ProductResponses[0].PlanValue, dataString.ProductResponses[0].Product.FriendlyName, dataString.ProductResponses[0].Id, dataString.ProductResponses[0].Moneybox, dataString.ProductResponses[1].PlanValue, dataString.ProductResponses[1].Product.FriendlyName, dataString.ProductResponses[1].Id, dataString.ProductResponses[1].Moneybox, dataString.ProductResponses[2].PlanValue, dataString.ProductResponses[2].Product.FriendlyName, dataString.ProductResponses[2].Id, dataString.ProductResponses[2].Moneybox)
+                    completion(dataString.ProductResponses[0].PlanValue, dataString.ProductResponses[0].Product.FriendlyName, dataString.ProductResponses[0].Id, dataString.ProductResponses[0].Moneybox, dataString.ProductResponses[1].PlanValue, dataString.ProductResponses[1].Product.FriendlyName, dataString.ProductResponses[1].Id, dataString.ProductResponses[1].Moneybox, dataString.ProductResponses[2].PlanValue, dataString.ProductResponses[2].Product.FriendlyName, dataString.ProductResponses[2].Id, dataString.ProductResponses[2].Moneybox,
+                               dataString.TotalPlanValue)
 
                }
                 

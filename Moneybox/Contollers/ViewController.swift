@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameLabel: UITextField!
     
     var name = ""
+    var totalPlanValue = 0.0
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +47,17 @@ class ViewController: UIViewController {
                         print("Header URL Request Name is ... \(name)")
                        
                    self.name = name
+            
+            DetailInfo.urlRequestDetailInfo(token: (token)){(sasPlanValue, sasAccountName, sasId, sasMoneybox, lisaPlanValue, lisaAccountName, lisaId, lisaMoneybox, giPlanValue, giAccountName, giId, giMoneybox, totalPlanValue) in
+                               DispatchQueue.main.async{
+                            
+                             print("total plan value at top screen \(totalPlanValue)")
+                                self.totalPlanValue = totalPlanValue
+                         }
+            
+            }
+            
+            
         }
         
         
@@ -77,6 +89,7 @@ class ViewController: UIViewController {
                          let uavc = segue.destination as! UserAccountsViewController
 
                            uavc.uavcname = name
+                        uavc.uavcTotalPlanValue = totalPlanValue
                     
                      }
    
